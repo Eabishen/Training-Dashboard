@@ -59,20 +59,13 @@ window.addEventListener("DOMContentLoaded", (e) => {
     body.classList.add("sidebar__close");
   }
   document.getElementById("loading").classList.add("loadhide");
-});
 
-if (window.innerWidth < 991) {
   window.addEventListener("click", (e) => {
-    console.log(e.target);
-    if (
-      e.target !== document.getElementById("sidebarid") &&
-      e.target !== hamburger
-    ) {
-      console.log("clicked outside sidebar");
-      if (body.classList.contains("sidebar__open")) {
+    window.addEventListener("click", (e) => {
+      if (!e.target.closest(".sidebar") && !e.target.closest(".hamburger")) {
         body.classList.remove("sidebar__open");
         body.classList.add("sidebar__close");
       }
-    }
+    });
   });
-}
+});
