@@ -280,6 +280,9 @@ a {
     border-bottom: 1px solid var(--border-color);
 }
 
+
+.navbardrop.show {}
+
 .dashboard-mainlayout {
     display: flex;
 }
@@ -304,7 +307,11 @@ a {
 
 .sidebar__close .hamburger {
     transform: rotate(180deg);
+}
 
+.sidebar__close .hamburger i {
+    pointer-events: none;
+    font-size: 20px;
 }
 
 .sidebar__close .chervonicom {
@@ -332,7 +339,7 @@ a {
     flex-shrink: 0;
     background-color: rgb(var(--white-color));
     position: relative;
-    border-right: 1px solid rgb(var(--gray-color), 0.05);
+    border-right: 1px solid var(--border-color);
     transition: all 0.3s ease;
 }
 
@@ -1036,11 +1043,14 @@ main {
         width: 180px;
     }
 
+
+    .industry-stats {
+        min-height: 300px;
+    }
+
 }
 
 @media screen and (max-width:500px) {
-
-
 
     .sidebar__close .sidebar {
         width: 0px;

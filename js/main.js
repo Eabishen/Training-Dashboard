@@ -35,6 +35,7 @@ firstNavItem.addEventListener("focus", () => {
 
 hamburger.addEventListener("click", () => {
   body.classList.toggle("sidebar__close");
+  body.classList.toggle("sidebar__open");
 
   dropdownLists.style.height = "0px";
   if (body.classList.contains("sidebar__close")) {
@@ -49,12 +50,29 @@ hamburger.addEventListener("click", () => {
 window.addEventListener("resize", () => {
   if (window.innerWidth < 991) {
     body.classList.add("sidebar__close");
+    body.classList.remove("sidebar__open");
   }
 });
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("DOMContentLoaded", (e) => {
   if (window.innerWidth < 991) {
+    body.classList.remove("sidebar__open");
     body.classList.add("sidebar__close");
   }
-
   document.getElementById("loading").classList.add("loadhide");
 });
+
+if (window.innerWidth < 991) {
+  window.addEventListener("click", (e) => {
+    console.log(e.target);
+    if (
+      e.target !== document.getElementById("sidebarid") &&
+      e.target !== hamburger
+    ) {
+      console.log("clicked outside sidebar");
+      if (body.classList.contains("sidebar__open")) {
+        body.classList.remove("sidebar__open");
+        body.classList.add("sidebar__close");
+      }
+    }
+  });
+}
