@@ -274,175 +274,71 @@
 
             <section class="main-content">
                 <div class="pageheading">
-                    <h1>Overview</h1>
+                    <h1>Personal Settings</h1>
 
                 </div>
-                <div class="cards-section default-underline">
-                    <div class="row g-3">
-                        <div class="col-12 col-md-6 col-lg-3">
-                            <div class="cardflex">
-                                <div>
-                                    <div class="cardnum">07</div>
-                                    <div class="carddesc">No of Courses</div>
-                                </div>
-                                <div>
-                                    <div class="cardicon blue-shade">
-                                        <i class='bx bxs-detail'></i>
-                                    </div>
-                                </div>
+
+                <div class="default-container formContainer">
+
+                    <div class="row g-5">
+
+                        <div class="col-12 col-lg-6">
+                            <div class="pb-4">
+                                This is personal details of the registered person.
                             </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-3">
-                            <div class="cardflex">
-                                <div>
-                                    <div class="cardnum">100</div>
-                                    <div class="carddesc">Students Placed</div>
-                                </div>
-                                <div>
-                                    <div class="cardicon lime-shade">
-                                        <i class='bx bxs-group'></i>
+                            <form action="">
+                                <div class="row g-4 mb-4">
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-wrapper">
+                                            <input type="text" id="fullname" value="Jackson Max" required>
+                                            <label for="fullname">Full name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-wrapper">
+                                            <input type="text" id="designation" value="Business Manager" required>
+                                            <label for="designation">Designation</label>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-3">
-                            <div class="cardflex">
-                                <div>
-                                    <div class="cardnum">10</div>
-                                    <div class="carddesc">Student rejected</div>
-                                </div>
-                                <div>
-                                    <div class="cardicon cherry-shade">
-                                        <i class='bx bxs-report '></i>
+                                <div class="row g-4 mb-4">
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-wrapper">
+                                            <input type="email" id="email" value="jacksonmax@email.in" required>
+                                            <label for="email">Email address</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-wrapper">
+                                            <input type="text" pattern="[789][0-9]{9}" id="phnumber" value="8551424563"
+                                                required>
+                                            <label for="phnumber">Phone number</label>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                                <button class="btnmain">Save</button>
+
+                            </form>
                         </div>
-                        <div class="col-12 col-md-6 col-lg-3">
-                            <div class="cardflex">
-                                <div>
-                                    <div class="cardnum">50+</div>
-                                    <div class="carddesc">Jobs available</div>
-                                </div>
-                                <div>
-                                    <div class="cardicon pink-shade">
-                                        <i class='bx bxs-shopping-bag'></i>
-                                    </div>
-                                </div>
+                        <div class="col-12 col-lg-6">
+                            <div>
+                                <h5>Did you know?</h5>
+                                <p>You can boost your institute's view x100, just by simply following some techniques
+                                </p>
+                                <ul>
+                                    <li>Keep an eye for Industry's demand for placements</li>
+                                    <li>Teaching skills that are in demand can make you stand out of the crowd</li>
+                                    <li>Showcase your courses online</li>
+                                    <li>Proper and swift response to enquiries</li>
+                                </ul>
+                                <p class="mb-1">Still having doubts? No worries! </p>
+                                <a href="tel:9552411241" class="btn btn-sm btn-outline-dark">Contact us</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- <section class="demand-section">
-                    <div class=" secondary-heading">Training in demand </div>
-                    <div class="training-demand">
-                        <div class="default-container demand-single">
-                            1. 
-                        </div>
-                    </div>
-                </section> -->
 
-                <div class="demand-section default-underline">
-                    <div class="row g-3">
-                        <div class="col-12 col-md-12 col-lg-5">
-                            <div class="" style="display: grid; height: 100%;">
-                                <div class="secondary-heading">Industries stats</div>
-
-                                <div class="default-container industry-stats">
-                                    <canvas id="myChart"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-4">
-                            <div class="skilltable">
-                                <div class="secondary-heading">profile in demand</div>
-                                <div class="default-container profiledemands">
-                                    <div class="timeline">
-                                        <div class="timeline-item">
-                                            <div class="timelineicon faicon yellow-shade"><i
-                                                    class="fa-solid fa-crown"></i>
-                                            </div>
-                                            <div class="timeline-content">
-                                                <span class="no yellow-shade">#1</span> Php developer <span>(32
-                                                    vacancies)</span>
-                                            </div>
-                                        </div>
-                                        <div class="timeline-item">
-                                            <div class="timelineicon faicon purple-shade"><i
-                                                    class="fa-solid fa-crown"></i>
-                                            </div>
-                                            <div class="timeline-content">
-                                                <span class="no purple-shade">#2</span> DevOps <span>(30
-                                                    vacancies)</span>
-                                            </div>
-                                        </div>
-                                        <div class="timeline-item">
-                                            <div class="timelineicon faicon pink-shade"><i
-                                                    class="fa-solid fa-crown"></i>
-                                            </div>
-                                            <div class="timeline-content">
-                                                <span class="no pink-shade">#3</span> SAP-S4 Hana Finance <span>(21
-                                                    vacancies)</span>
-                                            </div>
-                                        </div>
-                                        <div class="timeline-item">
-                                            <div class="timelineicon faicon green-shade"><i
-                                                    class="fa-solid fa-crown"></i>
-                                            </div>
-                                            <div class="timeline-content">
-                                                <span class="no green-shade">#4</span> Python <span>(18
-                                                    vacancies)</span>
-                                            </div>
-                                        </div>
-                                        <div class="timeline-item">
-                                            <div class="timelineicon faicon blue-shade"><i
-                                                    class="fa-solid fa-crown"></i>
-                                            </div>
-                                            <div class="timeline-content">
-                                                <span class="no blue-shade">#5</span> Software testing <span>(8
-                                                    vacancies)</span>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-3">
-                            <div class="skilltable">
-                                <div class=" secondary-heading">skills in demand</div>
-                                <div class=" profiledemands">
-                                    <div class="skills-wrapper">
-                                        <div class="skillscard default-container">
-                                            <i class='bx bxs-circle helperfont lime-shade custicon'></i>
-                                            <span>Problem
-                                                solving</span>
-                                        </div>
-                                        <div class="skillscard default-container">
-                                            <i class='bx bxs-circle helperfont orange-shade custicon'></i>
-                                            <span>Marketing</span>
-                                        </div>
-                                        <div class="skillscard default-container">
-                                            <i class='bx bxs-circle helperfont navy-shade custicon'></i>
-                                            <span>Communication skills</span>
-                                        </div>
-                                        <div class="skillscard default-container">
-                                            <i class='bx bxs-circle helperfont lightpurple-shade custicon'></i>
-                                            <span>Clean coding</span>
-                                        </div>
-                                        <div class="skillscard default-container">
-                                            <i class='bx bxs-circle helperfont lightyellow-shade custicon'></i>
-                                            <span>Problem
-                                                solving</span>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </section>
         </main>
     </section>

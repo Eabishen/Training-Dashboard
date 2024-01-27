@@ -263,7 +263,14 @@ a {
     font-size: 12px;
 }
 
-
+.btnmain {
+    border: none;
+    background-color: rgb(var(--primary-color));
+    color: rgb(var(--light-color));
+    padding: var(--xsmall-size) var(--small-size);
+    border-radius: var(--xsmall-size);
+    width: 100%;
+}
 
 .exit-shade {
     color: hsl(var(--red-shade) 45%);
@@ -853,6 +860,7 @@ a {
 
 .main-content {
     padding: var(--medium-size);
+    min-height: 100vh;
 }
 
 .cardflex {
@@ -1107,6 +1115,50 @@ a {
     /* margin-block: var(--small-size); */
 }
 
+/* Settings Page */
+.formContainer {
+    padding: var(--medium-size);
+}
+
+.form-wrapper {
+    position: relative;
+}
+
+.form-wrapper input {
+    width: 100%;
+    border-radius: var(--xsmall-size);
+    border-color: var(--border-color);
+    /* outline-offset: 5px; */
+    padding: var(--small-size);
+}
+
+.form-wrapper label {
+    position: absolute;
+    left: var(--small-size);
+    top: 50%;
+    padding: 0 var(--xsmall-size);
+    border-radius: var(--xsmall-size);
+    border: 1px solid transparent;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.form-wrapper input:focus,
+.form-wrapper input:valid {
+    border: 1px solid rgb(var(--gray-color));
+}
+
+.form-wrapper input:focus+label,
+.form-wrapper :valid+label {
+    top: -02px;
+    background-color: rgb(var(--white-color));
+    border: 1px solid var(--border-color);
+    font-size: 13px;
+}
+
+
+/* Settings Page */
 
 @media screen and (max-width:900px) {
 
@@ -1151,7 +1203,9 @@ a {
         inset: 0;
         width: 100%;
         height: 100%;
-        background-color: rgb(var(--dark-color), 0.2);
+        background-color: rgb(var(--dark-color), 0.5);
+        backdrop-filter: blur(02px);
+        -webkit-backdrop-filter: blur(02px);
     }
 
 
