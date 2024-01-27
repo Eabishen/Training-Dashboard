@@ -20,13 +20,16 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
+<body class="sidebar__open">
     <div id="loading" class="loader">
         <div class="loader_cust"></div>
 
     </div>
     <section class="dashboard-mainlayout">
         <nav class="sidebar " id="sibebarid" aria-label="Sidebar">
+            <div class="mobile_close faicon">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
             <div class="sidebar-sticky-container">
                 <div class="">
 
@@ -171,7 +174,7 @@
                 </div>
             </div>
         </nav>
-        <main>
+        <main class="maintag">
             <nav class="cust-navbar">
                 <div class="logo-cover">
                     <div class="left-logosection">
@@ -197,11 +200,39 @@
                             <button class="rightbtn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class='bx bxs-bell'></i>
                             </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Action two</a></li>
-                                <li><a class="dropdown-item" href="#">Action three</a></li>
-                            </ul>
+                            <div class="dropdown-menu notification-dropdown" onclick="event.stopPropagation()">
+                                <div class="d-flex align-items-center justify-content-between topnotification">
+                                    <div class="fw-bold" style="font-size: var(--medium-size); letter-spacing: 0.04px;">
+                                        Notifications
+                                    </div>
+                                    <div>
+                                        <a class="small-subinfo" href="">View More</a>
+                                    </div>
+                                </div>
+                                <div class="notification-content">
+                                    <ul aria-label="Notifications">
+                                        <li>
+                                            <div>
+                                                Ram kishore Joined Full-Stack development MERN <span
+                                                    class="small-subinfo">
+                                                    • #CD5C6F</span>
+                                            </div>
+                                            <div>
+                                                <span class="small-subinfo">05 mins ago</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div>
+                                                Kumar has been placed in Infotech Limited <span class="small-subinfo">
+                                                    • #CD5C6F</span>
+                                            </div>
+                                            <div>
+                                                <span class="small-subinfo">10 mins ago</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                         <div class="dropdown-center">
                             <button class="navprofile" type="button" data-bs-toggle="dropdown" aria-expanded="false">

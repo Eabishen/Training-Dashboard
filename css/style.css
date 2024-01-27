@@ -45,6 +45,9 @@
     --medium-size: 1rem;
     --large-size: 1.5rem;
     --xlarge-size: 2rem;
+
+    --sidebar-open: 250px;
+    --sidebar-close: 85px;
 }
 
 *,
@@ -281,14 +284,8 @@ a {
 }
 
 
-.navbardrop.show {}
-
-.dashboard-mainlayout {
-    display: flex;
-}
-
 .sidebar__close .sidebar {
-    width: 85px;
+    width: var(--sidebar-close);
     /* overflow-x: hidden;
     overflow-x: clip; */
 }
@@ -305,6 +302,21 @@ a {
     visibility: hidden;
 }
 
+.mobile_close {
+    display: none;
+    position: absolute;
+    right: -30px;
+    color: hsl(var(--red-shade) 40%);
+    background-color: rgb(var(--white-color));
+    top: 10px;
+    border: 1px solid var(--border-color);
+}
+
+.mobile_close i {
+    font-size: 18px;
+    pointer-events: none;
+}
+
 .sidebar__close .hamburger {
     transform: rotate(180deg);
 }
@@ -319,9 +331,12 @@ a {
     right: var(--xsmall-size);
 }
 
+
 .sidebar__close .sidebar-closed {
     display: none;
     opacity: 0;
+    overflow: hidden;
+    overflow: clip;
 }
 
 .sidebar__close .lidrop {
@@ -335,12 +350,15 @@ a {
 }
 
 .sidebar {
-    width: 250px;
-    flex-shrink: 0;
+    width: var(--sidebar-open);
     background-color: rgb(var(--white-color));
-    position: relative;
     border-right: 1px solid var(--border-color);
     transition: all 0.3s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 99;
 }
 
 .sidebar-sticky-container {
@@ -544,7 +562,7 @@ a {
     padding-block: var(--small-size);
     padding-inline: var(--medium-size);
     text-decoration: none;
-    width: max-content;
+    width: 100%;
     height: 100%;
     position: relative;
     border-radius: var(--xsmall-size);
@@ -552,6 +570,10 @@ a {
 
 .sidebar-bottomcontainer .mobiledroplist {
     top: -0px;
+}
+
+.sidebar-bottomcontainer .mobiledroplist a {
+    width: max-content;
 }
 
 .exitbtn {
@@ -562,9 +584,16 @@ a {
 
 /* Main */
 
-main {
-    width: 100%;
+.maintag {
     background-color: #fafafa;
+    margin-left: var(--sidebar-open);
+    margin-inline-start: var(--sidebar-open);
+    transition: all 0.3s ease;
+}
+
+.sidebar__close .maintag {
+    margin-left: var(--sidebar-close);
+    margin-inline-start: var(--sidebar-close);
 }
 
 .cust-navbar {
@@ -686,12 +715,53 @@ main {
     font-weight: 600;
 }
 
+.notification-dropdown {
+    padding: var(--small-size);
+    width: 280px;
+}
+
+.topnotification {
+    padding-bottom: var(--medium-size);
+    padding-block-end: var(--medium-size);
+    border-bottom: 1px solid var(--border-color);
+}
+
+
+.notification-content ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+.notification-content li {
+    padding: var(--small-size) 0;
+    padding-block: var(--small-size);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.notification-content li:last-child {
+    border: none;
+    padding-bottom: 0;
+    padding-block-end: 0;
+}
+
+.small-subinfo {
+    font-size: 12px;
+    color: rgb(var(--gray-color));
+    letter-spacing: 0.04rem;
+    display: inline-block;
+}
+
+
+
 .navbardrop {
     background-color: rgb(var(--white-color));
     border: 1px solid var(--border-color);
     width: 250px;
     box-shadow: var(--boxshadow);
 }
+
 
 .profiletopsection {
     display: flex;
@@ -1039,6 +1109,12 @@ main {
 
 
 @media screen and (max-width:900px) {
+
+
+    .mobile_close {
+        display: flex;
+    }
+
     div.dataTables_wrapper div.dataTables_filter input {
         width: 180px;
     }
@@ -1048,15 +1124,47 @@ main {
         min-height: 300px;
     }
 
+    .sidebar__close .sidebar {
+        width: var(--sidebar-open);
+        left: -100%;
+    }
+
+    .maintag {
+        margin-left: 0;
+    }
+
+    .sidebar__close .maintag {
+        margin-left: 0;
+        margin-inline-start: 0;
+        /* white-space: nowrap; */
+    }
+
+
+    .sidebar__open {
+        overflow-y: hidden;
+    }
+
+
+    .sidebar__open .maintag::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(var(--dark-color), 0.2);
+    }
+
+
 }
 
 @media screen and (max-width:500px) {
 
-    .sidebar__close .sidebar {
-        width: 0px;
-        overflow-x: hidden;
-        overflow-x: clip;
+    .navbardrop {
+        inset-inline-end: 30px;
     }
+
+    .sidebar__open .maintag {}
+
 
     .company-info {
         display: none;
