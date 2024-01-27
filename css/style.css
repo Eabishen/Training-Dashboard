@@ -1062,36 +1062,5 @@ main {
         display: none;
     }
 
-    .sidebar__open {
-        /* z-index: 9999; */
-        /* overflow: hidden; */
-        /* height: 100vh; */
-    }
 
-    .sidebar {
-        z-index: 99;
-    }
-
-    .sidebar__open .pageheading,
-    .sidebar__open .cardflex {
-        overflow-x: hidden;
-        flex-shrink: 0;
-    }
-
-
-    .sidebar__open .main-content {}
-
-    .sidebar__open main {
-        height: 100vh;
-        overflow: clip;
-        overflow: hidden;
-        flex-shrink: 0;
-        pointer-events: none;
-    }
-
-    /* .sidebar__open .dashboard-mainlayout {
-        overflow: hidden;
-        overflow: clip;
-        pointer-events: none;
-    } */
 }
