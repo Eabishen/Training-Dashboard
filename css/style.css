@@ -1156,8 +1156,32 @@ a {
     font-size: 13px;
 }
 
-
 /* Settings Page */
+
+/* Course list */
+
+.skills_header {
+    max-width: 200px;
+}
+
+.skills_table {
+    display: flex;
+    align-items: center;
+    gap: var(--xsmall-size);
+    flex-wrap: wrap;
+}
+
+.single_table_skills {
+    padding: var(--xsmall-size);
+    border-radius: var(--xsmall-size);
+    background-color: rgb(var(--light-color));
+    border: 1px solid var(--border-color);
+    position: relative;
+}
+
+/* Course list */
+
+
 
 @media screen and (max-width:900px) {
 
@@ -1223,5 +1247,8 @@ a {
         display: none;
     }
 
+    .skills_header {
+        min-width: 250px;
+    }
 
 }

@@ -1,4 +1,4 @@
-const dropdown = document.querySelector(".dropdownli");
+const dropdown = document.querySelector(".lidrop");
 const dropdownLists = document.querySelector(".subnavlist");
 const firstNavItem = document.querySelector(".subnavlist a");
 
@@ -75,3 +75,35 @@ window.addEventListener("DOMContentLoaded", (e) => {
   }
   document.getElementById("loading").classList.add("loadhide");
 });
+
+// Skills adding
+const skillsInput = document.querySelector("#skills_in");
+const skillsWrapper = document.querySelector("#addskills");
+const courseForm = document.querySelector("#coursedetails");
+
+courseForm.addEventListener("submit", function (event) {
+  event.preventDefault(); // Prevent form submission
+});
+
+skillsInput.addEventListener("keyup", function (event) {
+  const userInput = skillsInput.value.trim();
+  const key = event.key;
+
+  if (key === "," || key === "Enter") {
+    // If user input is not empty, add it to the skillsWrapper
+    if (userInput !== "") {
+      const skillElement = document.createElement("div");
+      const skillIcon = document.createElement("i");
+      skillIcon.classList.add("ms-2", "text-danger", "fa-solid", "fa-xmark");
+      skillIcon.setAttribute("role", "button");
+      console.log(skillIcon);
+      const trimmedInput = userInput.replace(/[, ]+$/, "");
+      skillElement.innerHTML = `${trimmedInput}${skillIcon.outerHTML}`;
+      skillElement.classList.add("single_table_skills");
+      skillsWrapper.appendChild(skillElement);
+      skillsInput.value = "";
+    }
+  }
+});
+
+// Skills adding

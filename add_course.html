@@ -16,13 +16,6 @@
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-
-    <!-- Datatable CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.1.1/css/buttons.bootstrap5.min.css">
-
-
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -38,7 +31,8 @@
                 <i class="fa-solid fa-xmark"></i>
             </div>
             <div class="sidebar-sticky-container">
-                <div>
+                <div class="">
+
                     <div class="sidebar-topcontainer">
                         <div class="logo-container">
                             <div class="logo-img">
@@ -65,7 +59,8 @@
                                     <span>&#x22EE;</span>
                                 </button>
                                 <ul class="dropdown-menu custom-dropdown">
-                                    <li><a href="#"><i class='bx bxs-cog helperfont purple-shade'></i> Settings</a></li>
+                                    <li><a href="./userSettings.html"><i class='bx bxs-cog helperfont purple-shade'></i>
+                                            Settings</a></li>
                                     <li><a href="#"><i class='bx bxs-info-circle helperfont green-shade'></i> Change
                                             Password</a></li>
                                     <li><a href="#"><i class='bx bxs-user-plus helperfont yellow-shade'></i> Add
@@ -76,7 +71,8 @@
 
                         </div>
                     </div>
-                    <div class="sidebar-middlecontainer">
+                    <div class="sidebar-middlecontainer position-relative">
+
                         <div class="subheader ">General</div>
                         <ul class="navlist">
                             <li class="mobiledropdown">
@@ -186,18 +182,6 @@
                         <button class="helperfont hamburger" id="hamburger">
                             <i class='bx bxs-chevron-left'></i>
                         </button>
-                        <!-- <div class="logo-img">
-                            <svg xmlns="http://www.w3.org/2000/svg" version="1.2" viewBox="0 0 146 141" width="146"
-                                height="141">
-                                <defs>
-                                    <image width="634" height="143" id="img1"
-                                        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAnoAAACPCAMAAABatIa9AAAAAXNSR0IB2cksfwAAANhQTFRFAAAADjh6KlCJXHqlXnumYn6oZH+pZYCqY3+pXXumSmqbP2GVSmmbT26eVXOhL1OMYHynG0OBRWWYWXajOVySJUuHNFePMlaOaYOsvMfa4+fv////2eDqqbfPDzd7Djd6xdDf9vf6ssDVfZO3x9Hg09rmw87e4ufvO12TeI+0lqjFh5y9UnCgKE6JDzp6DTd6Djd6DTh6DTd5Djh5DTh6Dz9/tMHWeJC1KE2I8fP3pbXNYH2nXHqlIUiESmqbW3ekFj9/Dzd3DTh6Djh6DDl5DTd5Ezx9WnakboRk0AAAAEh0Uk5TAP/X0drr+f/2183/////////////////////////QMD//////////////////zBgoNCAsPAQ///////k0v////8gcJBQ4Oz/IAkKigAAEgdJREFUeJztnXuf4zYVhicsUKC0bMtt6JSEFnb2xuTiJAu7wJbc6Pf/RmwuE1v2+56LbGd+sfX+tzuOfCw9ko6kI+nmJql/Ggj6ybNP+unPfv4Z0y9++emBX0lJUD31dyc9rWQ6PqfIFfXrKPISff2WTMYXJvI+jyYvwddbKVh8aSLvN3XIS+z1UwoUz03k1QMvsddLyUR8ZQKvPnmJvf5J5uFrE3hfN0BeYq9vkmn4rYm83zVCXmKvZxJZsHW2NQcYib1+qgHyGgMvodcnSRxcboCR2OuhBAouOcBI6PVPHAJbk9fUACOh1zfVJa+5AUZir2eqSV7j4CX0eiNS/r9/MvISen0RLv4nGWAk9PolWPq2Ju8PrZCX0OuL4sn7qh3yEnp9UTR5LYGX0OuNKiX/xycmL6HXF5UL/ikHGAm9XqlU7oy12z99c7fXt3/e/6ulAUYkesNqGqMWciqpYdnI+8vdWd9939oAI6HXKxULjAWq/PW7u6L+1ip5Cb2+qFBebIBRIu/u7kVCL6m+8uKiA4wyeXd39wm9pNo6lxYDr+jnnXWb0EuqK5W8W0De3cuEXlJdHYtKiIT/HqF39yqhl1RTh5KSzvL5FqL32sjRqzcv3yb0kpD2BfV3gbzPvoHomXh6eP3C+mgH0BtPprO+LcUMs/kiOq8HWrgAJM/A05G7fqC3HGajRZzxV6tDTauV12qgSlSrd+au++idi6A/6OU1rVZe/0QhL8LXK3LXafTCIugHemFNq5XXGnnuEe7tuxi38BrRA+/tPHqjBvNaRe8fiDw6r/cmxi1M6F2NLoqebzXjPqHXaV0Uvef/fF+hia/hJvS6rUui9+Vg8KrMnhC5ktDrti6I3uE2ghJ7UsxUQq/buhx6j7cRfMhJei+ilNDrti6F3vP8LJ+HN8e5untl8Tah121dCL3nTmb2Suh1W5dB70snMgcl9Lqti6AXt9U2oddtXQK9yMNCE3rdVvvoPY89LDSh1221jl7MAOOohF631TZ6UQOMoxJ63VaT6P2rqQHGUQm9bqtJ9P7d1ADjqIRet9Ukes/Kbt5/jglWESqq9PaP8tOWJBJ6V6EW0fvhMcGEXsx7E3oOhejlA4yEXsx7E3oOBegVBhgJvZj3JvQcKqJXPCw0oRfz3oSeQzl6jwOMhF78exN6Dp3R+yFMMKEX896EnkOP6JVXMBJ6Me9N6Dn0jKxgJPRi3pvQc+iIXjVQJaEX896EnkN79J7/t5pgQi/mvQk9h56RQJVeoDeeZKNiZs5G02y4qvHes/Hj9bRwEtBstMmGS/eHFQzdZptReLTQbjTK1jUSXQ6z6WhXTG+eTcbar5pF7wsIQOfRG69BNh4LYTox4UfR204X4E/7dCNIWVWOdgoTna/NdSXXdrMj6Y02W8lIF3pLYvj0+OdnJESq2+itMpb1J80MlGD0Vpi7k+Y++jgiRe02LvpWG8nCvZGcZhd6pG6fyLv5H3l9l9EbzunLizmklSdCbzXVkl2YORlriBQ/eGtM1Pjx8wn+tQc9khWzx7/rVoAQPM7NFcTrDVlHW5ECH0KviXQftXEluhta0tSrxqMWGbLSgR4j79zs6zZ0C72lOe/3yqTuMRq9T8Vq6Xa96c/1RCf2dnQAS8KOHqk4OXl9Q2/rynu5LYlHz9hGOW0dLLRe11Xtzj5ZUWb0JjjNAnn9Qs/X5B2Ved7bSLpn+a1dS8mxAScTqh1W9Azk9Qo9b94fNWX9WD30BiO1fyTlJxorJOf8+hlKw4iehbw+oTf2dmAnzQgjNdEbzLQJ3GVEomRkeuNvQ2FKNvTGOMVSRuomdAW9WPIoe3XRGyw09sxj8YKYE7n1Ggc/2oQeyeny5+o2dAS9ePIYe7XRU9lbR6S5w/Vk6f183HVb0DOS1xv03FkfCJZDffQGC3mGj3RcsvD4JfMmg2uFAT2S09VqptvQCfTiRhi50NCxAfSoH3mSZRmtLIyzNyU4yLCgR3IaNPC6EZ1AL2JWJRRoBJpAbzAXP823oHHSBiTk9fTYcEVFz05eT9ATpikW82w7PGg9FZqGnem9lTSHk2wuN7jiVFxOzGiarYdnrSuXsxXfDlpSxvBuek41ywoxVHiQYUDPTl4/0FvRciotuwsRLVUXiqE3LS8qLEkU1UGyu7f/3W6zRc+M18xW0GLhsfKu/OTyMVSGzQ9q6JHeBQ67aZac1QH0WLDGCGQJW+asIoLRm2OUJpRpMcpmPpPC8bY4UZAifI4M3Pf4sKG3gh4hD/feLENyXT96rHnCfd2SgFppCFCywjIqXbrns8C68MC1ihR6inWqN6spGWRo6LnI6wV6uLfhk2okB8vND0JPmqhbkhli4EbaBb3YSlnDWRrDKnJFInrEo2ZVCz9d1NWjhxs9aToXs1ceOfq3BflaBZvQtLOpgRarCZOEnpO8PqCHGxsxagn+pNxBRexIw+zVavaQrZUEYavX0Mse89pLXg/Qw0sCcm+DZ+RLuRizGRL7kaYAYyZkRsWLQ2+N2c3G0SMOtdCi4x8Ude3owZaG+tEnwdXT0vRvDHqYaSnUSRcY5lZYRm+N6ecpemThFk1vSzaFunb0YJ6o7Qyctgjbiagt4Lhbcn9zUWC6uNKmIw8ipp9n6BHyxDoFfxHoytGDS0j6Pl3Y7IUzJ3GnD8DpfvN+MiTwhZUih5MwEY0tQY/M2csvgD8JdOXowSUk3bmCYZph9xGHHmz2avW4ljVs7PDqgdJlYfTIwq3yVfA3ga4cPZQrlq4GDQhCDzHyzBXUQFj7vtVwnc2LZ3Us9mu7lvTwusdCXEEGgujFkdd59AytFxbscbX3WoyHwx69+VlupZAB1Q4WQLHzHYeA0Iskr/PoRU+mwi4q6Kgj0YPOp+IBrOgBMUTVJOgasv04hBuMHp6slKPB9tK/4rrRQ/71wpQssi2Yj4hED7bDUse3nPjjXKsoS9GF7JiLquw1QAmCvek+eqhK2o7lQrkcTFrEnq+HQOIz3PLxQUygFRXDThdT27Kao/FVvRo9ietGTwWICkEb9CKx6KEBDKsNy6g4ZdyBK22n6bwqT7+vzRjpKVw3esjFsQ3rUFethiU0knCudexmJoSevj9lttZ6SQ96NCjrJD2F60YPvcG2ZIqGuJdFj0VZGQQ/0bI3Sul4XRYpjo2eQF/Rg3659oAlYTTERSOfYY39myQK1kIOCt0+y1cZ5O5F/3330LPNZLWGnprwUREnruRi7qzJdRxxp8+HnrzFXf/9VaNXI1DtidGrRR4fSdmaUvpzpwsgBgjpP79q9IwtjDHZC6JXjzxhEG8bM7OjiLze59MGTd07rbWUXiDgtp+/+FrQKzcPUUdeFCTNH40t/CzwLLN74CM4jvqPrxG9c87DpQNbshdFr3x6RMyJF0XJU5em46Sth5zJEmZY9B/XRe+901hL6QUCc795zqM3PPEwwzC5InaKs3mWHQ8M4N+ozZpb4EPs+ad7+Fqu/tu66PGHsSylp2VHnmvoDbbJFTQHEgQjtYceX2+dZcB48Jy+YGNYoDOfYuBNhZpdUm30fvSZqpddSeLeBPQGG3qtrWagJi1EhRQwvk8gEr1PmihXaIAzOQT0FkNy3gqbqpFfvldt9D7o7yjKkmnaJ+TjM+Q02eI0ECGNoKcuK5MxBr3xQEuPS7k1qbocwdGbreg5tnazS6qNntPZs2VaLpmA+PAB9MtgriAWPdTRBUvtMABOmJ6N/sS9tlIfWqmk9OFDjBQ5BZUYI7z3JBd6b8DDzpk9c6adJMeHq/EnVIiQJoKm4KA74Aq9WVoY0AxVNOaHD1YC7Rl6p+g88mfs4dC3nuVC7y1C7+6j/pZcjkw7CDgshY4CeWzaJtyDVsi2oHFqMkpZS1cMrAaP+85TWVGnrxz4RNh6jAslO9Pw+c7snblc6OGL+t6DkcarD2TCz5VpN7CNKGQ8LEfL7ApcTgg85kj0VB8S1RYx7hI87z3KZ0h8vnIHgdHLI5LJ6aVwnwZ+tCjffAlE79NQ4yF46tXrF3Su+WZYlphp6GMLLsoKvcKy7RU1BGF8SSR6qJADslDxilGc4Hn3KVLkIqVyRA1ErxgLT9pPlOP4yaJ86L0g7N29eHP78aDbt+9eHv6HoVf5HzHfUZYVeydU0oZtr9Aj02ff9IThMDAoGWCxGPmGTI04wAyzV6r3CL1gFwZZh0EzLPDBQD70XjP0qjKjJ+6ZQd+p5ahhXxDsb0ND4tCDJawViUgSsqOhs/MqeY+OtdKPAxnYTzoN5EPvoT56lZlJaYM0cowCB8V29mFFsPKGvn4UerA1DT0q8IDoIaAsiEEPQlNKyHBvBlkErFqEnyvKuTb2rjZ61c/jpMAhVVBTYVmru/0hsKVfRaEHG73g+1CP7D4MMAY9uG+oBJbltiASht/2lS2ey+gZetVqw8MfYCcRfiR0fJVmD3sspWFmDHrQ0ws/DyUrobdCSUahp469a11UVdmYC58K5I0IMDd7DD3Q4rCZONi4lxon2IApu6Wwy12qtxHo4Y054ajH67rBQ6Si0DOE1Jiu5yOLGuUJIvxUUV70Ht7XRA+1DPhMJOxWlD8RVkJxRQOHCJf5j0APTz2Eoz/kIQjW4lncJ0WPTTyXPFb8UFHuOKjbmujhs5iqfQ67ZaDsVOAD/oXCMZ4K7EaPzJ2Vyw49wxtp7Fk9ZYfLb+hr9T7cg+BCrgM9jFTlYh8Sb1YZQpCMoKVDyKuki9CTfMgV8b/LlQo9Q1czyPorbiYnJOz9JHWy23wLOFnUCB/FzxQVEf35oR56bEvMYp4Nh/uaM9xmfDdzdRaQXMg5x00Ju76zUmpwMoKW7ZJVlcr8NuyucLqs4Sdz0J/Y2vEDBixOoxE9ViOCsiGmFxQTeGxq9yh6MRevnwUGEOwuXNQGkHhHNNLBk6dTWLS0jQbz/LjY0Lw6vYAIzx4dq/RiisfLuMLrqxn44ASyqFF0hpjtuaJi3n80jDV4+IASPSsK9aN0Z+GudAPZhAevmY8Nq8YSj6XT8apIsQ6/VFFW9Hq+vVAFOFuxm1Yu/GObNVgSuXADSzKnWIEF60+K3G6hd7ocvRo3zeJZE6HoZ5vTtZzbTAqaBM6WtIMiv5N0Km9nAAW3ot+W33WaSReo7gVattDe3ei4uWgsXsdqiFwh68vEbynko/wBe8Xu9PmowScETcWfc4MHD/xWUqPQQYVNXMUMa0r81+cC+RCTbNklsaPHFjXkbTOh4jeZPbymcSx3L9+9fsC/qlWqOCgx4hbsUDBGuAn0YARozZMHDrK6prIsUcoMPbKoUahsEQZ59OPb+4Dd9/f3H97eCmHL9BNNoitObNxqE1y+bwA9Mh6uuwF8r8ropYlGz4MeW9TI+/AIg1rV0arIHlII5uUbEHRhQuqjx2Zimmj2yj1ujLWmHWk8lpCMFs9fHWFRqzqZRaqMLPHo6Hj2CCG10ePzuw14e2UvMiJJ2z5cjh5b1Dgn6zepTdUhJSomQBcjpC56wspC7WHRwHK1kSbgZrjQYx722Q+NsKlFnc22nL4aSj5I8MZ4rmElVUpIPfRka5sYwgTkNHRihQ89NWzUb1R7KpjtZU8lT5r9p9rxVGvhoV1P5nL3Juqm8QhbrSdNSeixE7POo0G/WW0ptNvF3sxy583Y25TiZbHo4nyU4W4yx0nKEzYLnb/FvT5EKrITPXYWRj4H5rWrLZXsJkFGUBvjVV+u6wBApFZBJfQW9pTnTVaTxb5jxaOynArvxS8ktMKNHpvUymMmXGa1pqrhVlBkRgLZeV4oQW8l9LbWlMUj2g3FFuqEMdx4V2y5aOQMEM9ON3psUSN3RM1WtShk+Mp0+KrzmIeNpRD0KxND9PY2WI6KJXEj2FIV5hxj8GjZWxOCI8Iv5xb50SOD9cLEjcmoVkVMV8+/FCLQmJbqyXIWQAL0TgWgdGz6dTwliemFdzpW2khA0GqjLZQoX+5Hj83QFn+m2NSyBNuHQt03MYK0nNBojdnGdh98Eb3ClOKW0LKbThy3f+baYkN3FSvDc1NYpznecB9S//II9NgQJ+yqqE0tSzMec7KYZ7brDGmyw2wzKhbEaLRZ21EuohcaMp4E6c5G02wYhd1Jq202L9zDPJpnlXi7gx6pX4zEnFkO15tReK/z4cvdvUdPtBpm2ehRm2ySMiqpaf0fS69ELw+jAyYAAAAASUVORK5CYII=" />
-                                </defs>
-                                <style>
-                                </style>
-                                <use id="Background" href="#img1" x="-488" y="0" />
-                            </svg>
-                        </div> -->
 
                     </div>
                     <div class="right-logosection">
@@ -205,11 +189,40 @@
                             <button class="rightbtn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class='bx bxs-bell'></i>
                             </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Action two</a></li>
-                                <li><a class="dropdown-item" href="#">Action three</a></li>
-                            </ul>
+                            <div class="dropdown-menu notification-dropdown" onclick="event.stopPropagation()">
+                                <div class="d-flex align-items-center justify-content-between topnotification">
+                                    <div class="fw-bold" style="font-size: var(--medium-size); letter-spacing: 0.04px;">
+                                        Notifications
+                                    </div>
+                                    <div>
+                                        <a class="small-subinfo" data-bs-toggle="offcanvas" href="#notification"
+                                            role="button" aria-controls="notification">View More</a>
+                                    </div>
+                                </div>
+                                <div class="notification-content">
+                                    <ul aria-label="Notifications">
+                                        <li>
+                                            <div>
+                                                Ram kishore Joined Full-Stack development MERN <span
+                                                    class="small-subinfo">
+                                                    • #CD5C6F</span>
+                                            </div>
+                                            <div>
+                                                <span class="small-subinfo">05 mins ago</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div>
+                                                Kumar has been placed in Infotech Limited <span class="small-subinfo">
+                                                    • #CD5C6F</span>
+                                            </div>
+                                            <div>
+                                                <span class="small-subinfo">10 mins ago</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                         <div class="dropdown-center">
                             <button class="navprofile" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -261,124 +274,146 @@
 
             <section class="main-content">
                 <div class="pageheading">
-                    <h1>Enquiry</h1>
+                    <h1>Personal Settings</h1>
+
                 </div>
 
-                <div class="tablecontainer default-underline">
-                    <div class="default-container" id="tablecont">
-                        <div class="tablecover">
-                            <table id="example" class="table" cellspacing="0" width="100%">
-                                <thead>
-                                    <tr>
-                                        <th>Full Name </th>
-                                        <th>Course name</th>
-                                        <th>Email</th>
-                                        <th>Phone No.</th>
-                                        <th>Distinguish <br> platform profile</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Ram Kumar</td>
-                                        <td>Full Stack development</td>
-                                        <td>ramakuma@test.com</td>
-                                        <td>754215685</td>
-                                        <td>Training institute</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Shalma</td>
-                                        <td>PowerBI</td>
-                                        <td>ShalX@gmax.co</td>
-                                        <td>6885498574</td>
-                                        <td>Training institute</td>
-                                    </tr>
-                                    <tr>
-                                        <td>John Xavier</td>
-                                        <td>Python</td>
-                                        <td>johnhs@wtsx.com</td>
-                                        <td>7884565923</td>
-                                        <td>Training institute</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Mansfield Jeevarathinam</td>
-                                        <td>Full stack development with Python</td>
-                                        <td>mansfielX@ecx.in</td>
-                                        <td>9657845687</td>
-                                        <td>Organic</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                <div class="default-container formContainer">
+
+                    <div class="row g-5">
+
+                        <div class="col-12 col-lg-6">
+                            <div class="pb-4">
+                                This is personal details of the registered person.
+                            </div>
+                            <form action="" id="coursedetails">
+                                <div class="row g-4 mb-4">
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-wrapper">
+                                            <input type="text" id="coursename" value="" required>
+                                            <label for="coursename">Course name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-wrapper">
+                                            <input type="number" id="course_duration" value="" required>
+                                            <label for="course_duration">Course Duration</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row g-4 mb-4">
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-wrapper">
+                                            <input type="number" id="durationperday" value="" required>
+                                            <label for="durationperday">Duration per day</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-wrapper">
+                                            <input type="number" id="fee" value="" required>
+                                            <label for="fee">Fee</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-wrapper">
+                                            <input type="text" id="skills_in" value="" required>
+                                            <label for="skills_in">Skills</label>
+                                        </div>
+                                        <p class="my-2 small-subinfo text-dark fw-medium">
+                                            Tip: You can add multiple skills by adding commas or enter
+                                        </p>
+                                    </div>
+                                    <div class="my-2 skills_table" id="addskills">
+                                        <div class="single_table_skills">HTML5 <span> <i role="button"
+                                                    class="ms-2 text-danger cursor-pointer fa-solid fa-xmark"></i>
+                                            </span></div>
+                                    </div>
+                                </div>
+                                <button class="btnmain">Save</button>
+
+                            </form>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <div>
+                                <h5>Did you know?</h5>
+                                <p>You can boost your institute's view x100, just by simply following some techniques
+                                </p>
+                                <ul>
+                                    <li>Keep an eye for Industry's demand for placements</li>
+                                    <li>Teaching skills that are in demand can make you stand out of the crowd</li>
+                                    <li>Showcase your courses online</li>
+                                    <li>Proper and swift response to enquiries</li>
+                                </ul>
+                                <p class="mb-1">Still having doubts? No worries! </p>
+                                <a href="tel:9552411241" class="btn btn-sm btn-outline-dark">Contact us</a>
+                            </div>
                         </div>
                     </div>
                 </div>
+
 
             </section>
         </main>
     </section>
 
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="notification" aria-labelledby="notificationLabel">
+        <div class="offcanvas-header" style="border-bottom: 1px solid var(--border-color);">
+            <h5 class="offcanvas-title" id="notificationLabel">All Notifications</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="notification-content">
+                <ul aria-label="Notifications">
+                    <li>
+                        <div>
+                            Ram kishore Joined Full-Stack development MERN <span class="small-subinfo">
+                                • #CD5C6F</span>
+                        </div>
+                        <div>
+                            <span class="small-subinfo">05 mins ago</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            Kumar has been placed in Infotech Limited <span class="small-subinfo">
+                                • #FG2C6F</span>
+                        </div>
+                        <div>
+                            <span class="small-subinfo">10 mins ago</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            Micheal has been placed in Jax Limited <span class="small-subinfo">
+                                • #CD2XX6F</span>
+                        </div>
+                        <div>
+                            <span class="small-subinfo">12 mins ago</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            Jeevarathinam has enquired about Power-BI <span class="small-subinfo">
+                                • #XD5C6F</span>
+                        </div>
+                        <div>
+                            <span class="small-subinfo">14 mins ago</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
+    <script src="./js/main.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
     <!-- <script src="./js/chart.js"></script> -->
-
-    <!-- Datatable scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.1.1/js/dataTables.buttons.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.1.1/js/buttons.bootstrap5.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/pdfmake@0.1.72/build/pdfmake.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/pdfmake@0.1.72/build/vfs_fonts.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.1.1/js/buttons.html5.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.1.1/js/buttons.print.min.js"></script>
-
-
-
-    <script src="./js/main.js"></script>
-    <script src="./js/datatable.js"></script>
-    <script>
-
-
-        $(document).ready(function () {
-            var screenWidth = $(window).width();
-            if (screenWidth < 500) {
-                $('#example').DataTable({
-                    "dom": '<"dt-buttons"Bf><"clear">lrtip',
-                    "paging": true,
-                    "autoWidth": true,
-                    "scrollX": true, // Enable horizontal scrolling for screens below 500 pixels
-                    "buttons": [
-                        'colvis',
-                        'copyHtml5',
-                        'csvHtml5',
-                        'excelHtml5',
-                        'pdfHtml5',
-                        'print'
-                    ]
-                });
-            } else {
-                $('#example').DataTable({
-                    "dom": '<"dt-buttons"Bf><"clear">lrtip',
-                    "paging": true,
-                    "autoWidth": true,
-                    "buttons": [
-                        'colvis',
-                        'copyHtml5',
-                        'csvHtml5',
-                        'excelHtml5',
-                        'print'
-                    ]
-                });
-            }
-        });
-    </script>
-
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 
 </body>
 
