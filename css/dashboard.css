@@ -283,6 +283,13 @@ a {
     font-size: 12px;
 }
 
+
+.removedefault {
+    padding: var(--xsmall-size) var(--small-size);
+    border: 1px solid var(--border-color);
+    border-radius: var(--xsmall-size);
+}
+
 .btnmain {
     border: none;
     background-color: rgb(var(--primary-color));
@@ -292,12 +299,38 @@ a {
     width: 100%;
 }
 
-.default-primarybtn {
+.default-dangerbtn {
     border: none;
-    background-color: rgb(var(--primary-color));
-    color: rgb(var(--light-color));
+    background-color: transparent;
     padding: var(--xsmall-size) var(--small-size);
     border-radius: var(--xsmall-size);
+    transition: all 0.3s ease;
+    color: hsl(var(--red-shade) 50%);
+}
+
+.default-dangerbtn:hover {
+    background-color: hsl(var(--red-shade) 95%);
+}
+
+.default-primarybtn {
+    border: none;
+    padding: var(--xsmall-size) var(--small-size);
+    border-radius: var(--xsmall-size);
+    background-color: rgb(var(--primary-color));
+    color: rgb(var(--light-color));
+}
+
+.default-primaryoutlinebtn {
+    border: 1px solid rgb(var(--primary-color));
+    padding: var(--xsmall-size) var(--small-size);
+    border-radius: var(--xsmall-size);
+    background-color: transparent;
+    color: rgb(var(--primary-color));
+}
+
+.default-primaryoutlinebtn:hover {
+    background-color: rgb(var(--primary-color), 0.3);
+
 }
 
 .exit-shade {
@@ -1273,6 +1306,77 @@ a {
 }
 
 /* students */
+
+/* Placement */
+.placement {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--small-size);
+}
+
+.placement label {
+    display: flex;
+    cursor: pointer;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0.375em;
+    /* Accessible outline */
+    /* Remove comment to use */
+    /*
+        &:focus-within {
+                outline: .125em solid $primary-color;
+        }
+    */
+}
+
+.placement label:focus-visible {
+    outline: .125em solid rgb(var(--primary-color));
+}
+
+.placement label input {
+    position: absolute;
+    left: -9999px;
+}
+
+.placement label input:checked+span {
+    background-color: #d6d6e5;
+}
+
+.placement label input:checked+span:before {
+    box-shadow: inset 0 0 0 0.4375em rgb(var(--primary-color));
+}
+
+.placement label span {
+    display: flex;
+    align-items: center;
+    padding: 0.375em 0.75em 0.375em 0.375em;
+    border-radius: 99em;
+    transition: 0.25s ease;
+}
+
+.placement label span:hover {
+    background-color: #d6d6e5;
+}
+
+.placement label span:before {
+    display: flex;
+    flex-shrink: 0;
+    content: "";
+    background-color: #fff;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    margin-right: 0.375em;
+    transition: 0.25s ease;
+    box-shadow: inset 0 0 0 0.125em rgb(var(--primary-color));
+}
+
+.darkergreen {
+    color: hsl(var(--green-shade) 25%);
+}
+
+/* Placement */
 
 
 
