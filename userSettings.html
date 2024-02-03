@@ -17,7 +17,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/dashboard.css">
 </head>
 
 <body class="sidebar__open">
@@ -282,21 +282,29 @@
 
                     <div class="row g-5">
 
-                        <div class="col-12 col-lg-6">
-                            <div class="pb-4">
-                                This is personal details of the registered person.
+                        <div class="col-12 col-lg-6 ">
+                            <div class="pb-4 mb-2">
+                                This is personal details of the registered person. Manage your account <span
+                                    class="primary-color"><a class="text-decoration-none " href=""> <span
+                                            class="text-decoration-underline link-offset-1">
+                                            here</span> <i
+                                            class=" fa-solid fa-arrow-up-right-from-square faicon d-inline p-0"></i>
+                                    </a>
+                                </span>
                             </div>
                             <form action="">
                                 <div class="row g-4 mb-4">
                                     <div class="col-12 col-md-6">
                                         <div class="form-wrapper">
-                                            <input type="text" id="fullname" value="Jackson Max" required>
+                                            <input type="text" id="fullname" placeholder=" " value="Jackson Max"
+                                                required>
                                             <label for="fullname">Full name</label>
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6">
                                         <div class="form-wrapper">
-                                            <input type="text" id="designation" value="Business Manager" required>
+                                            <input type="text" id="designation" placeholder=" "
+                                                value="Business Manager">
                                             <label for="designation">Designation</label>
                                         </div>
                                     </div>
@@ -304,14 +312,15 @@
                                 <div class="row g-4 mb-4">
                                     <div class="col-12 col-md-6">
                                         <div class="form-wrapper">
-                                            <input type="email" id="email" value="jacksonmax@email.in" required>
+                                            <input type="email" id="email" placeholder=" " value="jacksonmax@email.in"
+                                                required>
                                             <label for="email">Email address</label>
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6">
                                         <div class="form-wrapper">
-                                            <input type="text" pattern="[789][0-9]{9}" id="phnumber" value="8551424563"
-                                                required>
+                                            <input type="text" placeholder=" " pattern="[789][0-9]{9}" id="phnumber"
+                                                value="8551424563" required>
                                             <label for="phnumber">Phone number</label>
                                         </div>
                                     </div>

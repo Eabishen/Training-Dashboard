@@ -72,6 +72,18 @@ body {
     color: rgb(var(--dark-color));
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
 .loader {
     position: fixed;
     inset: 0;
@@ -171,6 +183,14 @@ h6 {
 /* Optional */
 a {
     color: inherit;
+}
+
+.primary-color {
+    color: rgb(var(--primary-light));
+}
+
+.text-gray {
+    color: #787878;
 }
 
 .blue-shade {
@@ -1121,14 +1141,17 @@ a {
 
 .form-wrapper {
     position: relative;
+    transition: all 0.3s ease;
 }
 
 .form-wrapper input {
     width: 100%;
     border-radius: var(--xsmall-size);
-    border-color: var(--border-color);
-    /* outline-offset: 5px; */
+    border: 1px solid #afafaf;
+    outline-offset: 3px;
     padding: var(--small-size);
+    transition: all 0.3s ease;
+
 }
 
 .form-wrapper label {
@@ -1143,17 +1166,39 @@ a {
     transition: all 0.3s ease;
 }
 
-.form-wrapper input:focus,
-.form-wrapper input:valid {
-    border: 1px solid rgb(var(--gray-color));
-}
+.form-wrapper input:focus {}
 
 .form-wrapper input:focus+label,
-.form-wrapper :valid+label {
+.form-wrapper input:not(:placeholder-shown)+label {
     top: -02px;
     background-color: rgb(var(--white-color));
     border: 1px solid var(--border-color);
     font-size: 13px;
+    color: rgb(var(--primary-color));
+}
+
+.form-wrapper input:not(:placeholder-shown) {
+    border: 1px solid rgb(var(--primary-color));
+}
+
+.settings-plan {
+    display: flex;
+}
+
+.image-cont {
+    flex-shrink: 0;
+    width: 100px;
+    height: auto;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    background-color: rgb(var(--light-color));
+}
+
+.image-cont img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 /* Settings Page */

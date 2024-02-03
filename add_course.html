@@ -17,7 +17,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/dashboard.css">
 </head>
 
 <body class="sidebar__open">
@@ -274,7 +274,7 @@
 
             <section class="main-content">
                 <div class="pageheading">
-                    <h1>Personal Settings</h1>
+                    <h1>Add a course</h1>
 
                 </div>
 
@@ -284,19 +284,21 @@
 
                         <div class="col-12 col-lg-6">
                             <div class="pb-4">
-                                This is personal details of the registered person.
+                                <span class="fw-medium">Tip:</span> You can market demanding course to your institute to
+                                increase your profile
+                                visibility
                             </div>
                             <form action="" id="coursedetails">
                                 <div class="row g-4 mb-4">
                                     <div class="col-12 col-md-6">
                                         <div class="form-wrapper">
-                                            <input type="text" id="coursename" value="" required>
+                                            <input type="text" id="coursename" placeholder=" " value="">
                                             <label for="coursename">Course name</label>
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6">
                                         <div class="form-wrapper">
-                                            <input type="number" id="course_duration" value="" required>
+                                            <input type="number" id="course_duration" placeholder=" " value="">
                                             <label for="course_duration">Course Duration</label>
                                         </div>
                                     </div>
@@ -304,19 +306,19 @@
                                 <div class="row g-4 mb-4">
                                     <div class="col-12 col-md-6">
                                         <div class="form-wrapper">
-                                            <input type="number" id="durationperday" value="" required>
+                                            <input type="number" id="durationperday" placeholder=" " value="">
                                             <label for="durationperday">Duration per day</label>
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6">
                                         <div class="form-wrapper">
-                                            <input type="number" id="fee" value="" required>
+                                            <input type="number" id="fee" placeholder=" " value="">
                                             <label for="fee">Fee</label>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-wrapper">
-                                            <input type="text" id="skills_in" value="" required>
+                                            <input type="text" id="skills_in" placeholder=" " value="">
                                             <label for="skills_in">Skills</label>
                                         </div>
                                         <p class="my-2 small-subinfo text-dark fw-medium">
@@ -324,9 +326,9 @@
                                         </p>
                                     </div>
                                     <div class="my-2 skills_table" id="addskills">
-                                        <div class="single_table_skills">HTML5 <span> <i role="button"
+                                        <!-- <div class="single_table_skills">HTML5 <span> <i role="button"
                                                     class="ms-2 text-danger cursor-pointer fa-solid fa-xmark"></i>
-                                            </span></div>
+                                            </span></div> -->
                                     </div>
                                 </div>
                                 <button class="btnmain">Save</button>
@@ -334,18 +336,54 @@
                             </form>
                         </div>
                         <div class="col-12 col-lg-6">
-                            <div>
-                                <h5>Did you know?</h5>
-                                <p>You can boost your institute's view x100, just by simply following some techniques
-                                </p>
-                                <ul>
-                                    <li>Keep an eye for Industry's demand for placements</li>
-                                    <li>Teaching skills that are in demand can make you stand out of the crowd</li>
-                                    <li>Showcase your courses online</li>
-                                    <li>Proper and swift response to enquiries</li>
-                                </ul>
-                                <p class="mb-1">Still having doubts? No worries! </p>
-                                <a href="tel:9552411241" class="btn btn-sm btn-outline-dark">Contact us</a>
+                            <div class="">
+                                <p>Check some of our benefits on joining Training Partnership Membership plan</p>
+                                <div class="">
+
+                                    <div class="row g-3">
+                                        <div class="col-12">
+                                            <div class="d-flex gap-2  rounded-2 default-container ">
+                                                <div class="image-cont">
+                                                    <img src="./assets/image/verification.jpg" alt="Verification">
+                                                </div>
+                                                <div class="p-2">
+                                                    <h6 class="fw-bold">Verification badge</h6>
+                                                    <p class="text-gray">Lorem ipsum dolor sit amet consectetur
+                                                        adipisicing elit.
+                                                        Repellat, iste.</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="d-flex gap-2 rounded-2 default-container ">
+                                                <div class="image-cont">
+                                                    <img src="./assets/image/url.jpg" alt="Verification">
+                                                </div>
+                                                <div class="p-2">
+                                                    <h6 class="fw-bold">Customise your URL</h6>
+                                                    <p class="text-gray">Lorem ipsum dolor sit amet consectetur
+                                                        adipisicing elit.
+                                                        Repellat, iste.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="settings-plan gap-2 rounded-2 default-container ">
+                                                <div class="image-cont">
+                                                    <img src="./assets/image/jobvanacy.jpg" alt="Verification">
+                                                </div>
+                                                <div class="p-2">
+                                                    <h6 class="fw-bold">Daily updates of vacancies</h6>
+                                                    <p class="text-gray">Lorem ipsum dolor sit amet consectetur
+                                                        adipisicing elit.
+                                                        Repellat, iste.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
