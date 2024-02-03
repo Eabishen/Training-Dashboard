@@ -2,6 +2,66 @@ Stipend: 10000 - 16000
 PHP, Ajax, mySQL, JS, Laravel, Wordpress
 
 
+   <style>
+        .tablecover th {
+            min-width: 100px;
+        }
+
+        .tablecover th.extra {
+            min-width: 200px;
+        }
+
+        /* width */
+        #tablecont ::-webkit-scrollbar {
+            height: 10px;
+        }
+
+        /* Track */
+        #tablecont ::-webkit-scrollbar-track {
+            border-radius: 05px;
+            background: #e6e6e6;
+        }
+
+        /* Handle */
+        #tablecont ::-webkit-scrollbar-thumb {
+            background: #4a586e;
+            border-radius: 05px;
+        }
+
+        /* Handle on hover */
+        #tablecont ::-webkit-scrollbar-thumb:hover {
+            background: #0e387b;
+
+        }
+    </style>
+ <th>
+                                            <div class="normal">Customer id</div>
+                                        </th>
+                                        <th>
+                                            <div class="normal">Name </div>
+                                        </th>
+                                        <th>
+                                            <div class="normal">Email</div>
+                                        </th>
+                                        <th>
+                                            <div class="normal">Phone No.</div>
+                                        </th>
+                                        <th>
+                                            <div class="extra">Certificate name</div>
+                                        </th>
+                                        <th>
+                                            <div class="normal">Start date</div>
+                                        </th>
+                                        <th>
+                                            <div class="normal">End date</div>
+                                        </th>
+                                        <th>
+                                            <div class="extra">Remarks</div>
+                                        </th>
+                                        <th>
+                                            <div class="normal">Skill level</div>
+                                        </th>
+
 Style CDN:
     <!-- Datatable CSS -->
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">

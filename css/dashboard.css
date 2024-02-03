@@ -1227,6 +1227,41 @@ a {
 /* Course list */
 
 
+/* students */
+.students .tablecover th {
+    min-width: 100px;
+}
+
+.students .tablecover th.extra {
+    min-width: 200px;
+}
+
+/* width */
+.students ::-webkit-scrollbar {
+    height: 10px;
+}
+
+/* Track */
+.students ::-webkit-scrollbar-track {
+    border-radius: 05px;
+    background: #e6e6e6;
+}
+
+/* Handle */
+.students ::-webkit-scrollbar-thumb {
+    background: #4a586e;
+    border-radius: 05px;
+}
+
+/* Handle on hover */
+.students ::-webkit-scrollbar-thumb:hover {
+    background: #0e387b;
+
+}
+
+/* students */
+
+
 
 @media screen and (max-width:900px) {
 

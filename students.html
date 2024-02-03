@@ -25,38 +25,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/dashboard.css">
-    <style>
-        .tablecover th {
-            min-width: 100px;
-        }
 
-        .tablecover th.extra {
-            min-width: 200px;
-        }
-
-        /* width */
-        #tablecont ::-webkit-scrollbar {
-            height: 10px;
-        }
-
-        /* Track */
-        #tablecont ::-webkit-scrollbar-track {
-            border-radius: 05px;
-            background: #e6e6e6;
-        }
-
-        /* Handle */
-        #tablecont ::-webkit-scrollbar-thumb {
-            background: #4a586e;
-            border-radius: 05px;
-        }
-
-        /* Handle on hover */
-        #tablecont ::-webkit-scrollbar-thumb:hover {
-            background: #0e387b;
-
-        }
-    </style>
 </head>
 
 <body class="sidebar__open">
@@ -308,7 +277,7 @@
                     </form>
                 </div>
                 <div class="tablecontainer default-underline">
-                    <div class="default-container" id="tablecont">
+                    <div class="default-container students" id="tablecont">
                         <div class="tablecover">
                             <table id="example" class="table" cellspacing="0" width="100%">
                                 <thead>
@@ -429,9 +398,30 @@
     <script src="https://cdn.datatables.net/buttons/2.1.1/js/buttons.print.min.js"></script>
 
 
+    <!-- <script src="./js/datatable.js"></script> -->
 
-    <script src="./js/main.js"></script>
-    <script src="./js/datatable.js"></script>
+    <script>
+
+        $('#example').DataTable({
+            "dom": '<"dt-buttons"Bf><"clear">lrtip',
+            "paging": true,
+            "autoWidth": true,
+            "width": "250px",
+            "scrollX": true,
+            "buttons": [
+                'colvis',
+                'copyHtml5',
+                'csvHtml5',
+                'excelHtml5',
+                'print'
+            ]
+
+        });
+
+
+    </script>
+
+
     <script>
         const toastTrigger = document.getElementById('liveToastBtn')
         const toastLiveExample = document.getElementById('liveToast')
@@ -443,29 +433,7 @@
             })
         }
     </script>
-    <script>
-
-
-        $(document).ready(function () {
-            var screenWidth = $(window).width();
-
-            $('#example').DataTable({
-                "dom": '<"dt-buttons"Bf><"clear">lrtip',
-                "paging": true,
-                "autoWidth": true,
-                "scrollX": true,
-                "buttons": [
-                    'colvis',
-                    'copyHtml5',
-                    'csvHtml5',
-                    'excelHtml5',
-                    'print'
-                ]
-            });
-
-        });
-    </script>
-
+    <script src="./js/main.js"></script>
 
 </body>
 
