@@ -292,6 +292,14 @@ a {
     width: 100%;
 }
 
+.default-primarybtn {
+    border: none;
+    background-color: rgb(var(--primary-color));
+    color: rgb(var(--light-color));
+    padding: var(--xsmall-size) var(--small-size);
+    border-radius: var(--xsmall-size);
+}
+
 .exit-shade {
     color: hsl(var(--red-shade) 45%);
     background-color: hsl(var(--red-shade) 90%);
@@ -310,6 +318,11 @@ a {
     border-bottom: 1px solid var(--border-color);
 }
 
+.default-smallhelpertext {
+    font-size: 14px;
+    color: rgb(var(--gray-color));
+
+}
 
 .sidebar__close .sidebar {
     width: var(--sidebar-close);
