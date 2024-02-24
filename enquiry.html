@@ -25,10 +25,87 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/dashboard.css">
+    <style>
+        .skeleton-box {
+            display: flex;
+            align-items: center;
 
+            height: 1em;
+            position: relative;
+            overflow: hidden;
+            background-color: #dddbdd;
+        }
+
+
+        .name,
+        .plat {
+            width: 100px;
+        }
+
+        .corname {
+            width: 180px;
+        }
+
+        .eml {
+            width: 120px;
+            -webkit-filter: blur(03.8px);
+            filter: blur(03.8px);
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        .phno {
+            width: 100px;
+            -webkit-filter: blur(03.8px);
+            filter: blur(03.8px);
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+
+        }
+
+        .freeuser {
+            /* cursor: not-allowed; */
+        }
+
+        /* .freeuser>* {
+            pointer-events: none;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+
+        } */
+
+        .skeleton-box::after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            transform: translateX(-100%);
+            background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.2) 20%, rgba(255, 255, 255, 0.5) 60%, rgba(255, 255, 255, 0));
+            -webkit-animation: shimmer 5s infinite;
+            animation: shimmer 5s infinite;
+            content: "";
+        }
+
+        @-webkit-keyframes shimmer {
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        @keyframes shimmer {
+            100% {
+                transform: translateX(100%);
+            }
+        }
+    </style>
 </head>
 
 <body class="sidebar__open">
+
     <div id="loading" class="loader">
         <div class="loader_cust"></div>
 
@@ -264,7 +341,55 @@
                 <div class="pageheading">
                     <h1>Enquiry</h1>
                 </div>
+                <div class="tablecontainer default-underline freeuser">
+                    <div class="default-container" id="tablecont">
+                        <div class="tablecover">
+                            <table id="example" class="table" cellspacing="0" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>Full Name </th>
+                                        <th>Course name</th>
+                                        <th>Email</th>
+                                        <th>Phone No.</th>
+                                        <!-- <th>Distinguish <br> platform profile</th> -->
 
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            Eabishen
+                                        </td>
+                                        <td>Python</td>
+                                        <td>
+                                            <div class="skeleton-box eml">xxxxxxxxxxxxxxxx</div>
+                                        </td>
+                                        <td>
+                                            <div class="skeleton-box phno">xxxxxxxxxxxxxxxx</div>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Mansfield Jeevarathinam
+                                        </td>
+                                        <td>
+                                            Full stack development
+                                        </td>
+                                        <td>
+                                            <div class="skeleton-box eml">xxxxxxxxxxxxxxxx</div>
+
+                                        </td>
+                                        <td>
+                                            <div class="skeleton-box phno">xxxxxxxxxxxxxxxx</div>
+                                        </td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
                 <div class="tablecontainer default-underline">
                     <div class="default-container" id="tablecont">
                         <div class="tablecover">
@@ -276,29 +401,16 @@
                                         <th>Email</th>
                                         <th>Phone No.</th>
                                         <th>Distinguish <br> platform profile</th>
+
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>Ram Kumar</td>
-                                        <td>Full Stack development</td>
-                                        <td>ramakuma@test.com</td>
-                                        <td>754215685</td>
-                                        <td>Training institute</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Shalma</td>
-                                        <td>PowerBI</td>
-                                        <td>ShalX@gmax.co</td>
-                                        <td>6885498574</td>
-                                        <td>Training institute</td>
-                                    </tr>
-                                    <tr>
-                                        <td>John Xavier</td>
-                                        <td>Python</td>
-                                        <td>johnhs@wtsx.com</td>
-                                        <td>7884565923</td>
-                                        <td>Training institute</td>
+                                        <td>Mansfield Jeevarathinam</td>
+                                        <td>Full stack development with Python</td>
+                                        <td>mansfielX@ecx.in</td>
+                                        <td>9657845687</td>
+                                        <td>Organic</td>
                                     </tr>
                                     <tr>
                                         <td>Mansfield Jeevarathinam</td>

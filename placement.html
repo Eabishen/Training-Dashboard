@@ -288,7 +288,7 @@
                                         <td>Training institute Certification 2024</td>
                                         <td>
                                             <button type="button" class="default-primaryoutlinebtn removedefault"
-                                                data-bs-toggle="modal" data-bs-target="#placement">Interview <i
+                                                data-bs-toggle="modal" data-bs-target="#placement">Under training <i
                                                     class='bx bx-expand-vertical'></i></button>
                                         </td>
                                     </tr>
@@ -299,7 +299,7 @@
                                         <td>Python full stack development 2023</td>
                                         <td>
                                             <button type="button" class="green-shade removedefault darkergreen"
-                                                data-bs-toggle="modal" data-bs-target="#placement">Selected <i
+                                                data-bs-toggle="modal" data-bs-target="#placement">Eligible <i
                                                     class='bx bx-expand-vertical'></i></button>
                                         </td>
                                     </tr>
@@ -309,7 +309,7 @@
                                         <td>johnhs@wtsx.com</td>
                                         <td>Python Certification 2023</td>
                                         <td><button type="button" class="green-shade removedefault darkergreen"
-                                                data-bs-toggle="modal" data-bs-target="#placement">Selected <i
+                                                data-bs-toggle="modal" data-bs-target="#placement">Eligible <i
                                                     class='bx bx-expand-vertical'></i></button>
                                         </td>
                                     </tr>
@@ -319,7 +319,7 @@
                                         <td>mansfielX@ecx.in</td>
                                         <td>Full stack development with Python</td>
                                         <td><button type="button" class="cherry-shade removedefault"
-                                                data-bs-toggle="modal" data-bs-target="#placement">Not Selected <i
+                                                data-bs-toggle="modal" data-bs-target="#placement">Not eligible <i
                                                     class='bx bx-expand-vertical'></i></button>
                                         </td>
                                     </tr>
@@ -333,33 +333,33 @@
 
             <!-- Modal -->
             <div class="modal fade" id="placement" tabindex="-1" aria-labelledby="placementLabel" aria-hidden="true">
-                <div class="modal-dialog modal-sm modal-dialog-centered">
+                <div class="modal-dialog modal-customized modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header border-0 pb-1">
                             <h1 class="modal-title fs-5" id="placementLabel">Placement action</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body ">
+                        <div class="modal-body pb-0">
                             <div class="row">
                                 <div class="col-12">
                                     <form class="placement">
                                         <label>
                                             <input type="radio" name="radio" checked />
-                                            <span>Interview</span>
+                                            <span>Eligible</span>
                                         </label>
                                         <label>
                                             <input type="radio" name="radio" />
-                                            <span>Selected</span>
+                                            <span>Not eligible</span>
                                         </label>
                                         <label>
                                             <input type="radio" name="radio" />
-                                            <span>Not selected</span>
+                                            <span>Under training</span>
                                         </label>
                                     </form>
                                 </div>
                             </div>
                         </div>
-                        <div class="modal-footer border-0">
+                        <div class="modal-footer border-0 pt-2">
                             <button type="button" class="default-dangerbtn btn-sm"
                                 data-bs-dismiss="modal">Close</button>
                             <button type="button" class="default-primarybtn btn-sm">Save changes</button>
@@ -432,7 +432,6 @@
             "scrollX": true,
             "buttons": [
                 'colvis',
-                'copyHtml5',
                 'csvHtml5',
                 'excelHtml5',
                 'print'

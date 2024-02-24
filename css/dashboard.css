@@ -38,6 +38,12 @@
     --lightyellow-shade: 50 91%;
 
 
+    --bg: #F0DBA5;
+    --bg2: rgb(165, 195, 240)5;
+    --yellow: #EDB74D;
+    --red: #EB6666;
+    --green: #6FB18A;
+
 
     /* Sizes */
     --xsmall-size: 05px;
@@ -1152,7 +1158,7 @@ a {
 }
 
 #example_wrapper div.dt-buttons:not(.dt-buttons.btn-group):before {
-    content: "Filters:";
+    content: "Download:";
     margin-right: 05px;
 }
 
@@ -1260,6 +1266,7 @@ a {
     align-items: center;
     gap: var(--xsmall-size);
     flex-wrap: wrap;
+    text-transform: capitalize;
 }
 
 .single_table_skills {
@@ -1268,12 +1275,18 @@ a {
     background-color: rgb(var(--light-color));
     border: 1px solid var(--border-color);
     position: relative;
+
 }
 
 /* Course list */
 
 
 /* students */
+
+.custStudent {
+    transition: height 0.3s ease;
+}
+
 .students .tablecover th {
     min-width: 100px;
 }
@@ -1305,9 +1318,104 @@ a {
 
 }
 
+.radiowrapper {
+    display: flex;
+    align-items: center;
+    gap: var(--xsmall-size);
+    gap: var(--xsmall-size);
+    flex-wrap: wrap;
+}
+
+.wrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--small-size);
+    border-radius: var(--xsmall-size);
+    padding: var(--small-size);
+}
+
+.wrapper .option {
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--xsmall-size);
+    cursor: pointer;
+    padding: var(--xsmall-size) var(--small-size);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.wrapper .option .dot {
+    height: var(--small-size);
+    width: var(--small-size);
+    background: rgb(var(--light-color));
+    border: 1px solid rgb(var(--primary-color));
+    border-radius: 50%;
+    position: relative;
+}
+
+.wrapper .option .dot::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    width: var(--xsmall-size);
+    height: var(--xsmall-size);
+    background: rgb(var(--primary-color));
+    border-radius: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.5);
+    transition: all 0.3s ease;
+}
+
+.wrapper input[type="radio"] {
+    display: none;
+}
+
+#option-1:checked:checked~.option-1,
+#option-2:checked:checked~.option-2,
+#option-3:checked:checked~.option-3 {
+    border-color: rgb(var(--primary-color), 0.35);
+    background: rgb(var(--primary-color), 0.05);
+}
+
+#option-1:checked:checked~.option-1 .dot,
+#option-2:checked:checked~.option-2 .dot,
+#option-3:checked:checked~.option-3 .dot {
+    background: #fff;
+}
+
+#option-1:checked:checked~.option-1 .dot::before,
+#option-3:checked:checked~.option-3 .dot::before,
+#option-2:checked:checked~.option-2 .dot::before {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.wrapper .option span {
+    font-size: 16px;
+    margin-left: var(--small-size);
+    margin-inline-start: var(--small-size);
+    color: rgb(var(--dark-color));
+    user-select: none;
+}
+
+#option-1:checked:checked~.option-1 span,
+#option-3:checked:checked~.option-3 span,
+#option-2:checked:checked~.option-2 span {
+    color: rgb(var(--black-color));
+}
+
 /* students */
 
 /* Placement */
+.modal-customized {
+    max-width: max-content;
+}
+
 .placement {
     display: flex;
     flex-wrap: wrap;
@@ -1378,6 +1486,31 @@ a {
 
 /* Placement */
 
+.heighter {
+    height: 50vh;
+    position: relative;
+    /* background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%); */
+    background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+    color: red;
+    font-size: 32px;
+    font-weight: bolder;
+    z-index: 1;
+}
+
+.heighter::before {
+    content: ' ';
+    /* background: #8C8C8C; */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    background: url('../assets/image/noiser.png') repeat center;
+    mix-blend-mode: multiply;
+    /* mix-blend-mode: color-dodge; */
+    z-index: -1;
+}
+
+
 
 
 @media screen and (max-width:900px) {
@@ -1385,6 +1518,7 @@ a {
 
     .mobile_close {
         display: flex;
+
     }
 
     div.dataTables_wrapper div.dataTables_filter input {
